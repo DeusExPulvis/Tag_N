@@ -1,0 +1,246 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Fonte estilizada */
+}
+
+/* -----------------------------------Topbar ------------------------------------------------*/
+.topbar {
+    width: 100%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Linha superior */
+.topbar-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+}
+
+.logo{
+    margin-left: 50px;
+}
+
+/* Logo */
+.logo img {
+    height: 40px; /* Mantém o tamanho */
+    width: 100%; /* Ajusta a largura automaticamente */
+}
+
+/* Barra de pesquisa */
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #E6E6E6;
+    border-radius: 30px;
+    padding: 8px 15px;
+    width: 55%; /* Aumentei a largura */
+    position: relative;
+
+}
+/* Input de pesquisa */
+.search-bar input {
+    border: none;
+    background: none;
+    outline: none;
+    flex: 1;
+    padding: 8px;
+    font-size: 16px;
+}
+
+.lupa-icon {
+    width: 20px; /* Ajuste o tamanho da imagem */
+    height: 20px;
+    margin-right: 10px; /* Espaço entre a lupa e o input */
+}
+
+
+/* Ícones interativos */
+.icons {
+    display: flex;
+    gap: 20px;
+    margin-right: 40px;
+}
+
+
+.icons img {
+    width: 25px;  /* Ajuste o tamanho conforme necessário */
+    height: 25px;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+
+
+/* Efeito hover nos ícones */
+.icons img:hover {
+    opacity: 0.7;
+}
+
+/* Linha inferior */
+.topbar-bottom {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.topbar-bottom a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+/* Mudança de cor ao passar o mouse nas categorias */
+.topbar-bottom a:hover {
+    color: #B54242;
+}
+
+
+
+
+/* ------------------------------------------------Estilos do carrinho lateral ------------------*/
+.carrinho-lateral {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -2px 0 10px rgba(0,0,0,0.15);
+    z-index: 999;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+  }
+  
+  .carrinho-lateral.aberto {
+    right: 0;
+  }
+  
+  .carrinho-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .btn-fechar {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .carrinho-corpo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .carrinho-corpo img {
+    width: 60px;
+  }
+  
+  .continuar-comprando {
+    padding: 10px 20px;
+    border: 1px solid #14252C;
+    background: none;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+
+
+  /* ----------------------------------- Favoritos lateral ------------------------------------------------ */
+  .favoritos-lateral {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 320px;
+    height: 100vh;
+    background: #fff;
+    box-shadow: -4px 0 30px rgba(0,0,0,0.15);
+    z-index: 998;
+    transition: right 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
+  
+  .favoritos-lateral.aberto {
+    right: 0;
+  }
+  
+  .favoritos-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  
+  .favoritos-topo span {
+    font-size: 18px;
+    font-weight: normal;
+    color: #273C41;
+  }
+  
+  .favoritos-corpo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .favoritos-corpo img {
+    width: 80px;
+    border-radius: 10px;
+  }
+  
+  .favoritos-corpo p {
+    color: #273C41;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 900;
+    transition: opacity 0.4s ease-in-out;
+    opacity: 0;
+    pointer-events: none;   /* Não interage quando invisível */
+
+}
+.overlay.visivel {
+    opacity: 1;             /* Torna visível */
+    pointer-events: all;    /* Ativa interação */
+}
+
