@@ -1,0 +1,116 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif; /* Fonte estilizada */
+}
+
+/* Fundo da página */
+body, html {
+    height: 100%;
+    width: 100%;
+}
+
+.container {
+    background: url('imagem/homemCorrendo.png') no-repeat center center/cover; /* Sua imagem de fundo */
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+/* Overlay (retângulo escuro transparente) */
+.overlay {
+    background-color: rgba(20, 37, 44, 0.8); /* Deixei mais transparente */
+    width: 40%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Caixa de login */
+.login-box {
+    width: 80%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fffefe;
+}
+
+/* Logo */
+.logo {
+    width: 180px; /* Ajuste o tamanho como preferir */
+    margin-bottom: 20px;
+}
+
+/* Título Login */
+h2 {
+    margin-bottom: 20px;
+    font-weight: normal;
+}
+
+/* Inputs */
+form input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background-color: #dce8eb;
+    color: #fff;
+}
+
+/* Botão Entrar */
+form button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #274755;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #102a36;
+}
+
+/* Esqueceu a senha */
+.forgot {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+    color: #A3A39B;
+    text-decoration: none;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+/* Botão Criar Nova Conta */
+.create-account {
+    margin-top: 20px;
+    background: none;
+    border: 2px solid #274755;
+    padding: 10px;
+    color: #eee9e6;
+    width: 100%;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.create-account:hover {
+    background-color: #274755;
+    color: white;
+}

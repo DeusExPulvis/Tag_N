@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TagN</title>
+    <link rel="shortcut icon" type="imagex/png" href="imagens/Logo.png">
+    <link rel="stylesheet" href="feminino.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="../../Topbar/topbar.css">
+
+</head>
+<body>
+
+    <!-------------------------------------------------- TOPBAR --------------------------------------------------------------->
+
+    <div id="topbar-container"></div>
+    
+        <script>
+              fetch('../../Topbar/topbar.html')
+                 .then(response => response.text())
+                 .then(data => {
+                     document.getElementById('topbar-container').innerHTML = data;
+                     setTimeout(() => {
+                        atualizarOverlayFavoritos(); // Espera o HTML ser inserido no DOM
+                }, 100);
+     });
+
+        </script>
+
+<!-------------------------------------------------- CARROSSEL --------------------------------------------------------------->
+
+    
+    <section class="carousel31">
+        <div class="carousel-container3">
+            <img src="imagens/op1.jpg" class="slide active" alt="Produto 1">
+            <img src="imagens/femintenis.png" class="slide" alt="Produto 2">
+            <img src="imagens/woman.png" class="slide" alt="Produto 3">
+            
+            <!-- Botões de navegação -->
+            <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+            <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+
+        </div>
+
+        <!-- Indicadores de slide -->
+        <div class="dots">
+            <span class="dot active" onclick="mudarSlidePara(0)"></span>
+            <span class="dot" onclick="mudarSlidePara(1)"></span>
+            <span class="dot" onclick="mudarSlidePara(2)"></span>
+        </div>
+    </section>
+
+      
+    <!-------------------------------------------------- .DESTAQUE --------------------------------------------------------------->
+
+
+    <section class="destaques">
+        <h2 class="title">CATEGORIAS</h2>
+        <div class="destaques-container">
+            <!-- Roupas -->
+            <a href="roupas.html" class="destaque-item">
+                <img src="imagens/roupasfem.jpg" alt="Roupas">
+                <div class="destaque-overlay">
+                    <h3>ROUPAS</h3>
+                    <p>Esportivas e casuais</p>
+                </div>
+            </a>
+    
+            <!-- Calçados -->
+            <a href="calcados.html" class="destaque-item">
+                <img src="imagens/tenisfem.jpg" alt="Calçados">
+                <div class="destaque-overlay">
+                    <h3>CALÇADOS</h3>
+                    <p>Tênis, chuteiras, chinelos</p>
+                </div>
+            </a>
+    
+            <!-- Acessórios -->
+            <a href="acessorios.html" class="destaque-item">
+                <img src="imagens/acessoriofem.jpg" alt="Acessórios">
+                <div class="destaque-overlay">
+                    <h3>ACESSÓRIOS</h3>
+                    <p>Bolsas, bonés, meias, ..</p>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-------------------------------------------------- POPULARES --------------------------------------------------------------->
+<h2 class="title">MAIS POPULARES</h2>
+<div class="produtos-populares">
+    <div class="carrossel-container">
+        <div class="carrossel">
+            <a href="pagina-do-produto1.html" class="produto-item" data-id="15">
+                <button class="btn-favorito">
+                  <i class="fa-regular fa-heart"></i>
+                </button>
+              
+                <div class="produto-imagem">
+                  <img src="imagens/tenisrosa.png" alt="Camisa 1">
+                  <span class="btn-ver-produto">Ver</span>
+                </div>
+              
+                <p class="produto-marca">Nike</p>
+                <p class="produto-descricao">Tênis Nike Pegasus Premium - Rosa</p>
+                <p class="produto-preco">R$ 1500,00</p>
+              </a>
+              
+            <a href="pagina-do-produto2.html" class="produto-item" data-id="16">
+                <button class="btn-favorito">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <div class="produto-imagem" style="background-color: #E6E7E7;">
+                    <img src="imagens/moletonrosa.png" alt="Camisa 2">
+                    <span class="btn-ver-produto">Ver</span>
+                </div>
+                <p class="produto-marca">Adidas</p>
+                <p class="produto-descricao">Blusão Adidas All Szn - Marrom</p>
+                <p class="produto-preco">R$ 349,99</p>
+            </a>
+            <a href="pagina-do-produto3.html" class="produto-item" data-id="17">
+                <button class="btn-favorito">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+                <div class="produto-imagem" style="background-color: #E6E7E7;">
+                    <img src="imagens/shortrosa.png" alt="Camisa 3">
+                    <span class="btn-ver-produto">Ver</span>
+                </div>
+                <p class="produto-marca">Nike</p>
+                <p class="produto-descricao">Shorts Nike One Dri-Fit Mr - Rosa</p>
+                <p class="produto-preco">R$ 299,99</p>
+            </a>
+            <a href="../Produtos/Corinthians/corinthians.html" class="produto-item" data-id="18">
+                <button class="btn-favorito">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+
+
+                <div class="produto-imagem" style="background-color: #E6E7E7;" data-id="5">
+                    <img src="imagens/toppreto.png" alt="Camisa 4">
+                    <span class="btn-ver-produto">Ver</span>
+                </div>
+                <p class="produto-marca">Adidas</p>
+                <p class="produto-descricao">Top Adidas Aeroreact Essentials Feminino - Cinza</p>
+                <p class="produto-preco">R$ 199,99</p>
+            </a>
+            <a href="pagina-do-produto5.html" class="produto-item">
+                <button class="btn-favorito">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                
+                <div class="produto-imagem" style="background-color: #E6E7E7;" data-id="19">
+                    <img src="imagens/bolsarose.png" alt="Camisa 5">
+                    <span class="btn-ver-produto">Ver</span>
+                </div>
+                <p class="produto-marca">Adidas</p>
+                <p class="produto-descricao">Mochila Adidas Essentials Linear Unissex - Rosé</p>
+                <p class="produto-preco">R$ 249,99</p>
+            </a>
+            <a href="pagina-do-produto6.html" class="produto-item" data-id="7">
+                <button class="btn-favorito">
+                    <i class="fa-regular fa-heart"></i>
+                </button>
+                  
+                <div class="produto-imagem" style="background-color: #E6E7E7;">
+                    <img src="imagens/garrafarose.png" alt="Camisa 6">
+                    <span class="btn-ver-produto">Ver</span>
+                </div>
+                <p class="produto-marca">Stanley</p>
+                <p class="produto-descricao">Copo Térmico Stanley Quencher 1.18L Unissex - Rose</p>
+                <p class="produto-preco">R$ 359,99</p>
+            </a>
+        </div>
+        <div class="barra-rolagem">
+            <input type="range" class="rolagem" min="0" max="100" value="0">
+        </div>
+    </div>
+</div>
+
+    
+    <!-------------------------------------------------- LOOK --------------------------------------------------------------->
+
+<section class="look-completo">
+    <div class="look-container">
+      <div class="look-image">
+        <img src="imagens/lookmulher.png"Modelo com look completo">
+      </div>
+      <div class="look-content">
+        <h2>LOOK COMPLETO</h2>
+        <p class="subtext">Movimente-se com estilo.</p>
+        <div class="look-items">
+            <div class="produto-item" data-id="36">
+                <button class="btn-favorito"><i class="fa-regular fa-heart"></i></button>
+                <div class="produto-imagem">
+                  <img src="imagens/roxotenis.png" alt="Camiseta Estilosa">
+                  <span class="btn-ver-produto">Ver</span>
+                </div>
+                <p class="produto-marca">Nike</p>
+                <p class="produto-descricao">Tênis Nike Air Max Portal Feminino</p>
+                <p class="produto-preco">R$ 759,90</p>
+              </div>
+
+              <div class="produto-item" data-id="33">
+                <button class="btn-favorito"><i class="fa-regular fa-heart"></i></button>
+                <div class="produto-imagem">
+                  <img src="imagens/toproxo.png" alt="Camiseta Estilosa">
+                  <span class="btn-ver-produto">Ver</span>
+                </div>
+                <p class="produto-marca">Nike</p>
+                <p class="produto-descricao">Top Nike Dri-FIT Swoosh - Roxo</p>
+                <p class="produto-preco">R$ 225,00</p>
+              </div>
+
+              <div class="produto-item" data-id="34">
+                <button class="btn-favorito"><i class="fa-regular fa-heart"></i></button>
+                <div class="produto-imagem">
+                  <img src="imagens/topbranco.png" alt="Camiseta Estilosa">
+                  <span class="btn-ver-produto">Ver</span>
+                </div>
+                <p class="produto-marca">Nike</p>
+                <p class="produto-descricao">Jaqueta casual feminina com ziper</p>
+                <p class="produto-preco">R$ 319,99/p>
+              </div>
+
+              <div class="produto-item" data-id="35">
+                <button class="btn-favorito"><i class="fa-regular fa-heart"></i></button>
+                <div class="produto-imagem">
+                  <img src="imagens/saiabranca.png" alt="Camiseta Estilosa">
+                  <span class="btn-ver-produto">Ver</span>
+                </div>
+                <p class="produto-marca">Nike</p>
+                <p class="produto-descricao">Saia Shorts Nike Flex Victory Skirt </p>
+                <p class="produto-preco">R$ 289,99</p>
+              </div>
+                                          
+        </div>
+      </div>
+    </div>
+  </section>
+  
+<!-------------------------------------------------- RODAPÉ --------------------------------------------------------------->
+<footer class="footer">
+    <div class="footer-container">
+        <!-- Logo e redes sociais -->
+        <div class="footer-logo">
+            <img src="imagens/logo_branca.png" alt="Tag.N">
+            <p>Redes sociais</p>
+            <div class="social-icons">
+                <a href="#"><img src="https://static.vecteezy.com/ti/vetor-gratis/p1/14414683-logotipo-preto-do-instagram-em-fundo-transparente-gratis-vetor.jpg" alt="Instagram"></a>
+                <a href="#"><img src="https://images.icon-icons.com/509/PNG/512/Facebook_icon-icons.com_49947.png" alt="Facebook"></a>
+                <a href="#"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmt02gYCR_9oR1b4MNLoyXh55EEYno-Cobvw&s" alt="TikTok"></a>
+            </div>
+        </div>
+
+        <!-- Links institucionais -->
+        <div class="footer-links">
+            <h3>Institucional</h3>
+            <a href="#">Quem somos</a>
+            <a href="#">Nossas lojas</a>
+            <a href="#">Trabalhe conosco</a>
+            <a href="#">Política de privacidade</a>
+            <a href="#">Pagamentos</a>
+        </div>
+
+        <!-- Saiba mais -->
+        <div class="footer-links">
+            <h3>Saiba mais</h3>
+            <a href="#">Fale conosco</a>
+            <a href="#">Trocas e devoluções</a>
+            <a href="#">Prazos e entregas</a>
+        </div>
+
+        <!-- Formas de pagamento -->
+        <div class="footer-payments">
+            <h3>Formas de pagamento</h3>
+            <div class="payment-icons">
+                <img src="https://www.mobills.com.br/blog/wp-content/uploads/2022/06/logo-da-visa-bandeira-cartao-e1709061738681.png" alt="Visa">
+                <img src="https://www.mobills.com.br/blog/wp-content/uploads/2022/06/logo-da-bandeira-mastercard.png" alt="MasterCard">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Logo%E2%80%94pix_powered_by_Banco_Central_%28Brazil%2C_2020%29.svg/1280px-Logo%E2%80%94pix_powered_by_Banco_Central_%28Brazil%2C_2020%29.svg.png" alt="Pix">
+                <img src="https://logodownload.org/wp-content/uploads/2019/09/boleto-logo-0.png" alt="Boleto">
+                <img src="https://anadef.org.br/wp-content/uploads/2022/04/277580440007211_baaefe070804f03ea4d8f4d1a809a2a1-1-350x350.png" alt="American Express">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Elo_logo.png" alt="Elo">
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="feminino.js"></script>
+    <script src="../../Topbar/topbar.js"></script>
+</body>
+</html>

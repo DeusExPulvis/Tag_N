@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="topbar.css">
+
+    <script src="topbar.js" defer></script>
+</head>
+<body>
+    <header class="topbar" id="topbar">
+        <div class="topbar-top">
+            <a href="../PaginaInicial/paginicial.html"><div class="logo"><img src="imagens/Logo.png" alt=""></div></a>
+            <div class="search-bar">
+                <img src="imagens/Lupa.png" alt="Buscar" class="lupa-icon"> 
+                <input type="text" placeholder="Pesquise por um produto ou marca">
+            </div>
+            <div class="icons">
+                <div class="icons">
+                    <button class="favoritos-btn">
+                        <img src="imagens/Favoritos.png" alt="Meus Favoritos">
+                    </button>
+                    <button class="sacola-btn">
+                        <img src="imagens/Sacola.png" alt="Carrinho">  
+                    </button>
+                    <!--Salva a pagina atual ao clicar no icone de login-->
+                    <a href="../Login/login.html" onclick="salvarPaginaAtual()"><img src="imagens/Perfil.png" alt="Perfil"></a>
+                    
+                </div>
+                
+            </div>
+        </div>
+
+        <nav class="topbar-bottom">
+            <a href="#">Explore categorias</a>
+            <a href="#">Novidades</a>
+            <a href="../Feminino/feminino.html">Feminino</a>
+            <a href="../Masculino/masculino.html">Masculino</a>
+            <a href="#">Infantil</a>
+            <a href="#">Calçados</a>
+            <a href="#">Roupas</a>
+            <a href="#">Acessórios</a>
+            <a href="#">Esportes</a>
+            <a href="#">Marcas</a>
+            <a href="#">Liquidação</a>
+        </nav>
+    </header>
+
+    <!-- Carrinho Lateral Off-Canvas -->
+    <aside class="carrinho-lateral" id="carrinhoLateral">
+        <div class="carrinho-topo">
+        <span>Meu carrinho</span>
+        <button id="fecharCarrinho" class="btn-fechar">&times;</button>
+        </div>
+        <div class="carrinho-corpo">
+        <img src="imagens/Sacola.png" alt="Carrinho vazio">
+        <p>Ops! Carrinho vazio</p>
+        <button class="continuar-comprando">Continuar comprando</button>
+        </div>
+    </aside>
+
+  <!-- Favoritos Lateral Off-Canvas -->
+    <aside class="favoritos-lateral" id="favoritosLateral">
+        <div class="favoritos-topo">
+        <span>Meus favoritos</span>
+        <button id="fecharFavoritos" class="btn-fechar">&times;</button>
+        </div>
+        <div id="listaFavoritos" class="divide-y"></div>
+    </aside>
+
+    <div id="overlay" class="overlay"></div>
+
+
+</body>
+</html>
